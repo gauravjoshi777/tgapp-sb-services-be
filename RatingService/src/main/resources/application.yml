@@ -1,0 +1,19 @@
+# FILEPATH
+# Author: Gaurav Joshi
+# Date: 2024-01-30
+# Description: This file is used to configure the rating service
+
+server:
+    port: 9093
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: mydb
+
+  application:
+    name: RATING-SERVICE
+    
+  config:
+    import: optional:configserver:http://localhost:9095
